@@ -1,0 +1,19 @@
+.link{
+ text-decoration: none;
+ color: black;
+ font-size: medium;
+
+}
+
+@media only screen and (max-width: 767px){
+    .link{
+        font-size: 11px !important;
+    }
+    .link1{
+        font-size: medium !important;
+    }
+   .h{
+    height: 300px;
+   } 
+
+}

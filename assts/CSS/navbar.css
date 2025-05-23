@@ -1,0 +1,185 @@
+.form{
+    width: 300px;
+}
+.button{
+    margin-left: -10px  !important;
+}
+.button:hover{
+    border: none !important;
+    outline: none !important;
+}
+.navbar-flex{
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 150px;
+}
+.height{
+    height: 13vh !important;
+}
+.list-flex{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.login{
+    margin-left: -25px ;
+}
+.line{
+    height: 3px !important;
+    width: 99% !important;
+    background-color: black !important;
+    border: none;
+    opacity: 1 !important;
+}
+.line-2{
+    background-color: black;
+    width: 2px !important;
+    height: 100%;
+    opacity: 1;
+}
+.navigtaion-menu{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    /* justify-content: center !important; */
+}
+.link-hover {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.link-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.link-hover:hover {
+  color: #a777e3;
+}
+
+.link-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.width{
+    width: 300px;
+    font-size: small;
+}
+.navbar-pc{
+    display: none !important;
+}
+ .navbar-mobile{
+    display: none;
+ }
+ footer{
+    min-height: 73vh;
+ }
+ .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: #555;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+}
+
+.twitter:hover {
+  background-color: #55acee;
+}
+
+.instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, 
+              #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.pinterest:hover {
+  background-color: #bd081c;
+}
+.gap-6{
+    gap: px;
+}
+@media only screen and (max-width: 767px){
+    html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+    .height{
+        display: none;
+    }
+    .mobile{
+        display: none;
+    }
+     .navbar-mobile{
+         display: flex;
+     }
+     .link-hover {
+  position: relative;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.link-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.link-hover:hover {
+  color: #a777e3;
+}
+
+.link-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+ footer{
+    height: 200vh !important;
+ }
+ .gap-6{
+    gap: 100px !important   ;
+ }
+ .mobile-link-remove{
+  display: none;
+ }
+}
+   

@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", function () {
   window.onload = function () {
     showitem(); // Page load hone par function call hoga
   };
+  document.addEventListener("DOMContentLoaded", function () {
+    AppleItem();
+  });
+
+  window.onload = function () {
+     AppleItem(); // Page load hone par function call hoga
+  };
 
 
 function showitem() {
@@ -390,6 +397,184 @@ function watchItem() {
 
   html += `</div>`;
   document.getElementById("card-box").innerHTML = html;
+}
+///////////////////////////////////IMG SHOWASE CLICK ///////////////////////////////////
+ document.getElementById("clickable-img").addEventListener("click", function () {
+    alert("Image clicked!");
+  });
+  ///////////////////////////////////////Brand Filter ////////////////////////////////
+  function AppleItem(){
+    event.preventDefault();
+  
+  let mobile = {
+    pics: {
+      Img_1:
+        "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/17-400x400.jpg",
+      Img_2:
+        "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/mba_13_m3_2024_hero.png",
+      Img_3:
+        "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/127.jpg",
+      Img_4:
+        "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/15-400x400.jpg",
+        Img_5:
+        "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/27-400x400.jpg",
+        Img_6:
+        "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/136.jpg"
+    },
+
+    Name: {
+      Brand_1: "Iphone",
+      Brand_2: "MacBook",
+      Brand_3: "iPad",
+      Brand_4: "Apple Wacth",
+      Brand_5: "AirPods Pro",
+      Brand_6: "Apple TV",
+    },
+    Description: {
+      desc_1: "Iphone 15 Pro Max , 8 GB RAM, 512 GB Storage...",
+      desc_2: "The Apple MacBook Air M3 (2024) is a sleek and powerful laptop, available...",
+      desc_3: "iPad Pro 12.9-inch (6th Generation) Apple's flagship tablet, released in October 2022 ...",
+      desc_4: "The Apple Watch Series 9 is Apple's latest smartwatch, offering enhanced...",
+      desc_5: "Apple – AirPods PRO with Magsafe Charging Case – White  2 day Battery ......",
+      desc_6: " Apple QLED Tivi 4K Samsung 55Q60B 55 inch Smart TV ......",
+    },
+    Prices: {
+      price_1: "$1,499.99",
+      price_2: "$1999.99",
+      price_3: "$1,148.80",
+      price_4: "$950.00",
+      price_5: "$200.00",
+      price_6: "$549.99",
+    },
+  };
+
+  let link = "#";
+  let Mobilekey0 = Object.keys(mobile.pics);
+  let MobileKeys2 = Object.keys(mobile.Name);
+  let MobileKeys3 = Object.keys(mobile.Description);
+  let MobileKeys4 = Object.keys(mobile.Prices);
+
+  let html = `<div class="row">`; // start row
+
+  for (let i = 0; i < Mobilekey0.length; i++) {
+    let key = Mobilekey0[i];
+    let key2 = MobileKeys2[i];
+    let key3 = MobileKeys3[i];
+    let key4 = MobileKeys4[i];
+
+    html += `
+        <style>
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s ease;
+  }
+  .w{
+     width: 320px !important;
+  }
+     @media only screen and (max-width: 767px){
+     .w{
+     width: 100% !important;
+   
+.btn-click-animate {
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-click-animate:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2) inset;
+}
+
+
+  }
+  }
+</style>
+
+
+        <div class="col-md-4 mb-4 card-hover ">
+            <div class="card h-100">
+                <img src="${mobile.pics[key]}" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column ">
+                    <h5 class="card-title">${mobile.Name[key2]}</h5>
+                    <p class="card-text">${mobile.Description[key3]}</p>
+                    <p class="card-text text-warning">${mobile.Prices[key4]}</p>
+                    <a href="${link}" class="btn btn-outline-primary w ">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        `;
+  }
+
+  html += `</div>`; // end row
+
+  document.getElementById("card-box-1").innerHTML = html;
+  }
+  function SonyItem() {
+  event.preventDefault();
+
+  let sony = {
+    pics: {
+      Img_1: "https://m.media-amazon.com/images/I/51IpPUNKagL._AC_UY327_FMwebp_QL65_.jpg", // Sony Bravia TV
+      Img_2: "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/96.jpg", // PS5
+      Img_3: "https://sp.yimg.com/ib/th?id=OPHS.w0RhglH9FMIYiw474C474&o=5&pid=21.1&w=174&h=174", // WH-1000XM5
+      Img_4: "https://sp.yimg.com/ib/th?id=OIP.oPJgVtdequRhQ8PwM3T5vgHaLZ&pid=Api&w=148&h=148&c=7&dpr=2&rs=1", // Xperia 1 V
+      Img_5: "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/43-400x400.jpg", // Soundbar
+      Img_6: "https://ecomall-be87.kxcdn.com/ecomall/wp-content/uploads/2023/03/90-400x400.jpg" // Alpha A7 IV
+    },
+
+    Name: {
+      Brand_1: "Sony Bravia 4K TV",
+      Brand_2: "Sony PlayStation 5",
+      Brand_3: "Sony WH-1000XM5",
+      Brand_4: "Sony Xperia 1 V",
+      Brand_5: "Sony Soundbar",
+      Brand_6: "Sony Alpha A7 IV",
+    },
+
+    Description: {
+      desc_1: "Sony Bravia 55-inch 4K UHD Smart Google TV with vibrant display and smart features.",
+      desc_2: "Sony PlayStation 5 – Next-gen console..",
+      desc_3: "Sony WH-1000XM5 Wireless Noise.",
+      desc_4: "Sony Xperia 1 V – 6.5-inch OLED, 4K HDR display, triple camera setup.",
+      desc_5: "Sony 5.1 Channel Soundbar with Subwoofer – Immersive audio for ..",
+      desc_6: "Sony Alpha A7 IV – Full-frame mirrorless camera with 33MP sensor and 4K video.",
+    },
+
+    Prices: {
+      price_1: "$899.99",
+      price_2: "$499.99",
+      price_3: "$348.00",
+      price_4: "$1,199.99",
+      price_5: "$279.99",
+      price_6: "$2,498.00",
+    },
+  };
+
+  let link = "#";
+  let keys = Object.keys(sony.pics);
+  let nameKeys = Object.keys(sony.Name);
+  let descKeys = Object.keys(sony.Description);
+  let priceKeys = Object.keys(sony.Prices);
+
+  let html = `<div class="row">`;
+
+  for (let i = 0; i < keys.length; i++) {
+    html += `
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="${sony.pics[keys[i]]}" class="card-img-top" alt="Sony Product">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${sony.Name[nameKeys[i]]}</h5>
+            <p class="card-text">${sony.Description[descKeys[i]]}</p>
+            <p class="card-text text-warning">${sony.Prices[priceKeys[i]]}</p>
+            <a href="${link}" class="btn btn-outline-primary w">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  html += `</div>`;
+  document.getElementById("card-box-1").innerHTML = html;
 }
 
 

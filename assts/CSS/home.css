@@ -4,7 +4,27 @@
  font-size: medium;
 
 }
-
+.font{
+     font-family: 'Montserrat', sans-serif;
+     font-size: 70px;
+     font-weight: bolder !important;
+     opacity: 0.3;
+     transition: all 0.5s ease-in-out !important; 
+}
+.font:hover{
+    opacity: 1;
+}
+.anchar{
+    text-decoration: none !important;
+    color: black;
+}
+.img-link{
+ text-decoration: none !important;
+ ;
+}
+#clickable-img :hover {
+    cursor: pointer;
+}
 @media only screen and (max-width: 767px){
     .link{
         font-size: 11px !important;

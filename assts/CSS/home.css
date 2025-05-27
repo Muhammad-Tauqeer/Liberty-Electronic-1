@@ -4,6 +4,10 @@
  font-size: medium;
 
 }
+html{
+     overflow-x: hidden;
+}
+
 .font{
      font-family: 'Montserrat', sans-serif;
      font-size: 70px;

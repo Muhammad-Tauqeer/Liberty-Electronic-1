@@ -182,4 +182,18 @@
   display: none;
  }
 }
+ .link{
+            color: white !important;
+        }
+         .link:hover{
+            color: skyblue !important;
+         }
+         .link:active{
+            color: skyblue !important;
+         }
+        @media (max-width : 768px) {
+            .g-5{
+            gap: 0px !important;
+        } 
+        }
    

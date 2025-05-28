@@ -1,21 +1,32 @@
 function imgsamsung1(){
-    const link="https://tse3.mm.bing.net/th?id=OIP.QUzFH-egIZLVzyXY3j7kYgHaEK&pid=Api&P=0&h=220"
+    const link="../PICS/S23-1.jpg"
     const html=`<img
             src="${link}"
-            alt=""  />`
+            alt="" height="400" width="400"  />`
             document.getElementById("imgbox").innerHTML = html;
 }
 function imgsamsung2(){
-    const link="https://tse1.mm.bing.net/th?id=OIP.UK56pYZqNpmGl_MW5fpCfwHaEK&pid=Api&P=0&h=220"
+    const link="../PICS/S23-2.jpg"
     const html=`<img
             src="${link}"
-            alt=""  />`
+            alt="" height="400" width="400" />`
             document.getElementById("imgbox").innerHTML = html;
 }
 function imgsamsung3(){
-    const link="https://tse4.mm.bing.net/th?id=OIP.pTd5OtKH1jBB-lmRa5hXcAHaEK&pid=Api&P=0&h=220"
+    const link="../PICS/S23-3.jpg"
     const html=`<img
             src="${link}"
-            alt=""  />`
+            alt="" height="400" width="400" />`
             document.getElementById("imgbox").innerHTML = html;
 }
+
+ let i = 0; // Global variable
+
+    function addItem() {
+      i++; // Increment i
+      document.getElementById("putitem").innerText = i;
+    }
+ function deleteItem(){
+    i--; // Decrement i
+    document.getElementById("putitem").innerText = i;
+ }

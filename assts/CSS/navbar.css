@@ -1,5 +1,5 @@
 .form{
-    width: 300px;
+    width: 400px !important;
 }
 .button{
     margin-left: -10px  !important;
@@ -47,7 +47,7 @@
 .link-hover {
   position: relative;
   display: inline-block;
-  color: black;
+  color: black !important;
   text-decoration: none;
   font-weight: 600;
   padding: 5px 0;
@@ -125,11 +125,20 @@
 .gap-6{
     gap: px;
 }
+.navbar-mobile{
+display: none !important;
+}
 @media only screen and (max-width: 767px){
     html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; 
+}
+.nav-pc{
+  display: none !important;
+}
+.navbar-mobile{
+  display: block !important;
 }
     .height{
         display: none;
@@ -181,8 +190,15 @@
  .mobile-link-remove{
   display: none;
  }
+ .delas-pic{
+  width: 100% !important;
+ }
+ .delas-pic1{
+  align-items: center !important;
+  justify-content: center !important;
+ }
 }
- .link{
+ .link1{
             color: white !important;
         }
          .link:hover{

@@ -38,6 +38,10 @@ html{
     }
    .h{
     height: 300px;
-   } 
+   }
+   .h-1{
+    height : 800px;
+    width: 95%;
+   }  
 
 }

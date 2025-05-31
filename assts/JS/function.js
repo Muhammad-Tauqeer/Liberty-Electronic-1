@@ -69,6 +69,14 @@ function showitem() {
       price_5: "$1519.99",
       price_6: "$819.99",
     },
+    function: {
+      function_1: "f1()",
+      function_2: "f2()",
+      function_3: "f3()",
+      function_4: "f4()",
+      function_5: "f5()",
+      function_6: "f6()",
+    },
   };
 
   let link = "#";
@@ -76,6 +84,7 @@ function showitem() {
   let MobileKeys2 = Object.keys(mobile.Name);
   let MobileKeys3 = Object.keys(mobile.Description);
   let MobileKeys4 = Object.keys(mobile.Prices);
+  let fuctionkeys5 = Object.keys(mobile.function);
 
   let html = `<div class="row">`; // start row
 
@@ -84,6 +93,7 @@ function showitem() {
     let key2 = MobileKeys2[i];
     let key3 = MobileKeys3[i];
     let key4 = MobileKeys4[i];
+    let key5 = fuctionkeys5[i];
 
     html += `
        <style>
@@ -112,9 +122,9 @@ function showitem() {
         <button class="btn col-3 btn-primary hover-3" id="likeBtn">
           <i class="bi bi-heart" id="heartIcon"></i>
         </button>
-        <a href="#" class="btn col-3 btn-primary hover-3">
-          <i class="bi bi-cart-check"></i>
-        </a>
+       <button onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
+  <i class="bi bi-cart-check"></i>
+</button>
       </div>
     </div>
   </div>
@@ -125,6 +135,9 @@ function showitem() {
   html += `</div>`; // end row
 
   document.getElementById("card-box").innerHTML = html;
+}
+function addToCart(index){
+  alert("Item Added to cart")
 }
 //////////////////////Laptop Fuction ///////////////////////////////////
 function laptopitem() {
@@ -212,7 +225,7 @@ function laptopitem() {
         <button class="btn col-3 btn-primary hover-3" id="likeBtn">
           <i class="bi bi-heart" id="heartIcon"></i>
         </button>
-        <a href="#" class="btn col-3 btn-primary hover-3">
+        <a href="#" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
           <i class="bi bi-cart-check"></i>
         </a>
       </div>
@@ -310,7 +323,7 @@ function accessoriesItem(event) {
             <button class="btn col-3 btn-primary hover-3" id="likeBtn">
               <i class="bi bi-heart" id="heartIcon"></i>
             </button>
-            <a href="#" class="btn col-3 btn-primary hover-3">
+            <a href="#" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
               <i class="bi bi-cart-check"></i>
             </a>
           </div>
@@ -405,7 +418,7 @@ function watchItem() {
         <button class="btn col-3 btn-primary hover-3" id="likeBtn">
           <i class="bi bi-heart" id="heartIcon"></i>
         </button>
-        <a href="#" class="btn col-3 btn-primary hover-3">
+        <a href="#" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
           <i class="bi bi-cart-check"></i>
         </a>
       </div>
@@ -621,7 +634,7 @@ function SonyItem() {
               <button href="" class="btn col-3 btn-primary hover-3" id="likeBtn">
                 <i class="bi bi-heart" id="heartIcon"></i>
               </button>
-              <a href="" class="btn col-3 btn-primary hover-3">
+              <a href="" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
                 <i class="bi bi-cart-check"></i>
               </a>
             </div>
@@ -727,7 +740,7 @@ function AppleItem() {
               <button href="" class="btn col-3 btn-primary hover-3" id="likeBtn">
                 <i class="bi bi-heart" id="heartIcon"></i>
               </button>
-              <a href="" class="btn col-3 btn-primary hover-3">
+              <a href="" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
                 <i class="bi bi-cart-check"></i>
               </a>
             </div>
@@ -831,7 +844,7 @@ function SamsungItem() {
               <button href="" class="btn col-3 btn-primary hover-3" id="likeBtn">
                 <i class="bi bi-heart" id="heartIcon"></i>
               </button>
-              <a href="" class="btn col-3 btn-primary hover-3">
+              <a href="" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
                 <i class="bi bi-cart-check"></i>
               </a>
             </div>
@@ -939,7 +952,7 @@ function dellItem() {
               <button href="" class="btn col-3 btn-primary hover-3" id="likeBtn">
                 <i class="bi bi-heart" id="heartIcon"></i>
               </button>
-              <a href="" class="btn col-3 btn-primary hover-3">
+              <a href="" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
                 <i class="bi bi-cart-check"></i>
               </a>
             </div>
@@ -1048,7 +1061,7 @@ function HPItem() {
               <button href="" class="btn col-3 btn-primary hover-3" id="likeBtn">
                 <i class="bi bi-heart" id="heartIcon"></i>
               </button>
-              <a href="" class="btn col-3 btn-primary hover-3">
+              <a href="" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
                 <i class="bi bi-cart-check"></i>
               </a>
             </div>
@@ -1063,4 +1076,107 @@ function HPItem() {
   html += `</div>`; // end row
 
   document.getElementById("card-box-1").innerHTML = html;
+}
+
+function showmore() {
+  event.preventDefault();
+  let mobile = {
+    pics: {
+      Img_1:
+        "https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/03/04-768x768.jpg",
+      Img_2:
+        "https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/03/77-768x768.jpg",
+      Img_3:
+        "https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/03/01-768x768.jpg",
+      Img_4:
+        "https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/03/79-768x768.jpg",
+      Img_5:
+        "https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/03/76-768x768.jpg",
+      Img_6:
+        "https://demo.theme-sky.com/ecomall/wp-content/uploads/2023/03/03-768x768.jpg",
+    },
+
+    Name: {
+      Brand_1: "HP Pavilion 15",
+      Brand_2: "Dell Inspiron 14",
+      Brand_3: "Lenovo IdeaPad Slim 3",
+      Brand_4: "Apple MacBook Air M1",
+      Brand_5: "ASUS VivoBook 15",
+      Brand_6: "Acer Aspire 5",
+    },
+    Description: {
+      desc_1: "HP Pavilion 15.6 Laptop, 12th Gen ....",
+      desc_2: " Dell Inspiron 14” FHD Laptop, AMD Ryzen 7...",
+      desc_3: "Lenovo IdeaPad Slim 3, Intel Core i5 12th Gen....",
+      desc_4: "Apple MacBook Air with Apple M1 chip, 8GB RAM....",
+      desc_5: " ASUS VivoBook 15.6” FHD, Intel Core i3 11th Gen ....",
+      desc_6: "Acer Aspire 5 A515, AMD Ryzen 5, 8GB RAM...",
+    },
+    Prices: {
+      price_1: "$749.99",
+      price_2: "$689.99",
+      price_3: "$599.99",
+      price_4: "$999.99",
+      price_5: "$449.99",
+      price_6: "$522.99",
+    },
+  };
+
+  let link = "../Pages/cart.html";
+  let Mobilekey0 = Object.keys(mobile.pics);
+  let MobileKeys2 = Object.keys(mobile.Name);
+  let MobileKeys3 = Object.keys(mobile.Description);
+  let MobileKeys4 = Object.keys(mobile.Prices);
+
+  let html = `<div class="row">`; // start row
+
+  for (let i = 0; i < Mobilekey0.length; i++) {
+    let key = Mobilekey0[i];
+    let key2 = MobileKeys2[i];
+    let key3 = MobileKeys3[i];
+    let key4 = MobileKeys4[i];
+
+    html += `
+        <style>
+  .hover-3 {
+    transition: all 0.3s ease-in-out;
+  }
+  .hover-3:hover,
+  .icon {
+    transform: scale(1.1);
+  }
+</style>
+<div class="col-md-4 mb-4">
+  <div class="card h-100">
+    <img
+      src="${mobile.pics[key]}"
+      class="card-img-top"
+      alt="Sony Product" />
+    <div class="card-body d-flex flex-column bg-dark">
+      <h5 class="card-title text-white">${mobile.Name[key2]}</h5>
+      <p class="card-text text-white">${mobile.Description[key3]}</p>
+      <p class="card-text text-warning">${mobile.Prices[key4]}</p>
+      <div class="row d-flex justify-content-center flex-row container gap-2">
+        <a href="#" class="btn col-3 btn-primary hover-3">
+          <i class="bi bi-arrows-angle-contract"></i>
+        </a>
+        <button class="btn col-3 btn-primary hover-3" id="likeBtn">
+          <i class="bi bi-heart" id="heartIcon"></i>
+        </button>
+        <a href="#" onclick="addToCart(${i})" class="btn col-3 btn-primary hover-3">
+          <i class="bi bi-cart-check"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+  }
+
+  html += `</div>`; // end row
+
+  document.getElementById("card-box-3").innerHTML = html;
+}
+function f1() {
+  document.getElementById("cart-container").innerHTML = "Cart Added";
 }

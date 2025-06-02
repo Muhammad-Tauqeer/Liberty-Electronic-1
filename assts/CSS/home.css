@@ -44,4 +44,7 @@ html{
     height : 90vh;
     width: 95%;
    }  
+   #hello{
+    display: none !important;
+}
 }

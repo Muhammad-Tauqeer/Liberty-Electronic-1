@@ -1,0 +1,49 @@
+/* Background — Use either image or gradient */
+body {
+  /* For background image */
+  /* background-image: url('your-image.jpg'); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+
+  /* OR use gradient */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container box */
+.auth-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle buttons row */
+.auth-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.auth-toggle button {
+  width: 48%;
+}
+
+/* Show/hide forms */
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+}

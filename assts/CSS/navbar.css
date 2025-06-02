@@ -86,9 +86,7 @@
  .navbar-mobile{
     display: none;
  }
- footer{
-    min-height: 73vh;
- }
+
  .social-icon {
   display: flex;
   align-items: center;
@@ -181,9 +179,6 @@ display: none !important;
   transform: scaleX(1);
   transform-origin: left;
 }
- footer{
-    height: 200vh !important;
- }
  .gap-6{
     gap: 100px !important   ;
  }
@@ -212,4 +207,21 @@ display: none !important;
             gap: 0px !important;
         } 
         }
+         nav,footer {
+        background-color: #2f2f2f;
+      }
+      .nav-link {
+        color: white !important;
+      }
+      .navbar-brand img {
+        height: 50px;
+      }
+      .social-icon {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0d6efd; /* Bootstrap primary color, aap change kar sakte hain */
+  transform: scale(1.2);
+}
    

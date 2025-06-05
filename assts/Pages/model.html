@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>360° Mobile Model</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+
+    model-viewer {
+      width: 100%;
+      max-width: 500px;
+      height: 50vh;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+  </style>
+  <!-- Include model-viewer via CDN -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+  <h1>360° Mobile 3D View</h1>
+
+  <!-- Model Viewer Component -->
+  <model-viewer 
+    src="../models/samsung_s23_ultra_free.glb" 
+    alt="3D model of mobile phone"
+    auto-rotate 
+    camera-controls 
+    ar 
+    shadow-intensity="1" 
+    exposure="0.9" 
+    style="margin: auto;">
+  </model-viewer>
+
+</body>
+</html>

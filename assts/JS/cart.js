@@ -12,7 +12,7 @@ function checkCart() {
 }
 
 function returnToShop() {
-  window.location.href = 'shop.html'; // Change this to your shop page
+  window.location.href = '../../index.html'; // Change this to your shop page
 }
 
 // Call on page load

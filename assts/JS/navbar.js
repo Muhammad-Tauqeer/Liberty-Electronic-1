@@ -5,8 +5,12 @@ function showserchbar() {
     // Show the search bar
     const html = `
       <div class="col-12 col-lg-9 d-flex justify-content-center">
-        <input type="text" class="form-control " style=" padding: 5px !important;">
-        <button class="btn btn-primary">Submit</button>
+       <input
+        type="text"
+        id="productSearch"
+        class="form-control"
+        placeholder="Search Products..."
+        onkeyup="filterCards()" />
       </div>`;
     container.innerHTML = html;
   } else {

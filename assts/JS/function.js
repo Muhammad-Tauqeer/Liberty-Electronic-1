@@ -1180,3 +1180,17 @@ function showmore() {
 function f1() {
   document.getElementById("cart-container").innerHTML = "Cart Added";
 }
+const searchInput = document.getElementById('searchInput');
+const originalContent = document.body.innerHTML;
+
+searchInput.addEventListener('input', () => {
+  const searchText = searchInput.value.toLowerCase();
+
+  if (searchText === "samsung") {
+    document.body.innerHTML = '';   // Clear all content
+    SamsungItem();                  // Show Samsung items
+  } else {
+    document.body.innerHTML = originalContent;  // Restore original content
+  }
+});
+
